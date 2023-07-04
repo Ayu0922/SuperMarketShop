@@ -1,0 +1,138 @@
+
+ <app-header></app-header>
+ <!-- products section start  -->
+ <section class="my-lg-14 my-8">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-6 mt-3">
+
+                <h3 class="mb-4 nav-name">Snacks & Sweets</h3>
+
+            </div>
+            <div class="col-md-6 mb-6 mt-3">
+                <form class="d-flex mb-6" style="margin-bottom: 15px;">
+                
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"  [(ngModel)]="searchTerm" (keyup)="search($event)" [ngModelOptions]="{standalone: true}">
+                    
+                    <button class="btn-search-icon rounded-circle" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                   
+                  </form>
+            </div>
+        </div>
+
+        <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
+            <!-- <ng-container *ngFor="let item of filterCategory|filter:searchText"> -->
+                <ng-container *ngFor="let item of filterCategory| filter:searchKey:'subtitle'">
+            <div class="col">
+                <div class="card card-product">
+                    <div class="card-body">
+                        <span id="best_sellers">Best Sellers</span>
+                        <div class="text-center position-relative ">
+                            <div class=" position-absolute top-0 start-0">
+                               
+                                <span class="badge bg-danger">{{item.bage}}</span>&nbsp;&nbsp;&nbsp;
+                                <span class="badge bg-success">{{item.off}}</span>
+                            </div>
+                            <a href="#!">
+ <img src="{{item.img}}" alt="Grocery Ecommerce Template" class="mb-3 img-fluid">
+</a>
+<div class="card-product-action">
+<a  class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"  style="text-decoration: none;">
+<i class="fa-solid fa-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
+<a class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist" (click)=addtowishlist(item) style="text-decoration: none;">
+    <i class="fa-regular fa-heart" ></i></a>
+<!-- <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a> -->
+
+</div>
+</div>
+<div class="text-small mb-1">
+    <a href="#!" class="text-decoration-none text-muted">
+        <small>{{item.subtitle}}</small></a>
+    </div>
+    <h2 class="fs-6">
+    <a href="#!" class="text-inherit text-dark  text-decoration-none">{{item.title}}</a></h2>
+    <div>                       
+                        
+
+            <span class="badge rounded-pill bg-success small">{{item.rate}} <i class="fa-solid fa-star"></i></span>
+            <span class="text-muted"> {{item.sold}}</span>
+            
+    </div>
+    
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            
+                                <span class="text-dark"><strong>&#8377;{{item.price*item.qty}}</strong>  </span>
+                                <span class="text-dark">{{item.weight}}</span>
+                                </div>
+
+                        <div class=" d-flex justify-content-center align-items-center mt-1 pt-3  counter">
+                            <p><span (click)="dec(item)" style="cursor: pointer;"><i class="fa-solid fa-square-minus"  style="color:red"></i></span> {{item.qty}} <span (click)="inc(item)" style="cursor: pointer;"><i class="fa-solid fa-square-plus"></i></span></p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-1">
+                            <span class="bg-light text-primary rounded p-1"><i class="fa-solid fa-truck-fast"></i> <span class="ps-1 fw-bold">Free Delivery</span></span>
+                        </div>
+                        <div class="d-grid  mx-auto  mt-3">
+                            <button class="btn  btn-outline-success" (click)=addtocart(item) ><i class="fa-solid fa-circle-plus"></i> Add</button>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </ng-container>
+
+        </div>
+</div>
+        <!--Model Start-->
+        <ng-container *ngFor="let item of filterCategory">
+        <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">{{item.title}}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                 <div class="row" >
+                    
+                    <div class=" position-absolute top-0 start-0">
+                    <span class="badge bg-danger">{{item.bage}}</span>&nbsp;&nbsp;&nbsp;
+                    <span class="badge bg-success">{{item.off}}</span>
+                  </div>
+                    <img src="{{item.img}}" alt="Grocery Ecommerce Template" class="mb-3 img-fluid">
+<div class="d-flex flex-column bd-highlight mb-3">
+<div class="p-2 bd-highlight">Product Brand :<span >{{item.title}}</span></div> 
+
+<div class="p-2 bd-highlight">Product Category :<span >{{item.subtitle}}</span></div> 
+
+<div class=" p-2 bd-highlight"> Product  Price : <span class="text-dark"><strong>&#8377;{{item.price*item.qty}}</strong></span></div>
+
+<div class="p-2 bd-highlight">   Product  Weight :<span class="text-dark ">{{item.weight}}</span></div>
+<div class="p-2 bd-highlight">  Sold Product :<span class="text-dark ">{{item.sold}}</span></div>
+</div>
+<div  class="p-2 bd-highlight">
+<span class="bg-light text-primary rounded p-2"><i class="fa-solid fa-truck-fast"></i> <span class="ps-1 fw-bold">Free Delivery</span></span>
+
+</div>
+                    
+                 </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button type="button" class="btn btn-primary" routerLink="/buy" data-bs-dismiss="modal">Buy Now</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+                  
+                </div>
+                 </div>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div> -->
+              </div>
+            </div>
+        </ng-container>
+          <!--Model Ends-->
+</section>
+  <!-- products section end  -->
+  <app-service></app-service>
+  <app-footer></app-footer>
+ 

@@ -1,0 +1,73 @@
+<div class="container ">
+<h1 class="text-center text-primary mb-4 mt-3">ADD NEW PRODUCT</h1>
+<h3 class="text-center text-info mb-4 mt-3">(SNACKS & SWEETS)</h3>
+<div class="row d-flex justify-content-center align-items-center">
+
+                  <form [formGroup]=" productRecords" class="justify-content-center">
+                     <div class="row">
+                      <div class=" col-md-4 mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Product Name</label>
+                        <input type="text" placeholder="Enter Product Name" formControlName="title" class="form-control"  id="title" aria-describedby="emailHelp" required>
+                     </div>
+
+                          <div class="col-md-4 mb-3">
+                              <label for="subtitle" class="form-label">Product Category</label>
+                              <select formControlName="subtitle" id="subtitle" class="form-select"  aria-label="Default select example">
+                                <!-- <option selected>Open this select menu</option> -->
+                                <option *ngFor="let order of subtitle; let i = index" [value]="subtitle[i].name">
+                                  {{subtitle[i].name}}
+                                </option>
+                              </select>
+                          </div>
+                
+                     <div class="col-md-4 mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Image URL</label>
+                        <input type="text" placeholder="Enter Image URL" formControlName="img" class="form-control" id="img" aria-describedby="emailHelp"  required>
+                     </div>
+                     </div>
+                  
+<div class="row">
+  <div class="col-md-4 mb-3">
+    <label for="exampleInputEmail1" class="form-label">Price</label>
+    <input type="text" formControlName="price"  placeholder="Enter Product Price In INR" class="form-control"  id="salary" aria-describedby="emailHelp"  required>
+  </div>
+   
+
+  <div class="col-md-4 mb-3">
+    <label for="exampleInputEmail1" class="form-label">Rate</label>
+    <input type="text" formControlName="rate" class="form-control"  placeholder="Enter Star Rate ex- 4.5/5"  id="salary" aria-describedby="emailHelp"  required>
+  </div>
+
+  <div class="col-md-4 mb-3">
+    <label for="exampleInputEmail1" class="form-label">Bage</label>
+    <input type="text"  placeholder="Enter bage ex-Hot,Sale"  formControlName="bage" class="form-control" id="salary" aria-describedby="emailHelp"  required>
+  </div>
+</div>
+                  <div class="row">
+                    <div class="col-md-4 mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Sold</label>
+                      <input type="text" placeholder="Enter how many item sold ex-(500)"  formControlName="sold" class="form-control" id="salary" aria-describedby="emailHelp"  required>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Offer</label>
+                      <input type="text" placeholder="Enter with % sign ex-20%" formControlName="off" class="form-control" id="salary" aria-describedby="emailHelp"  required>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Weight</label>
+                      <input type="text"  placeholder="Enter Weight in g/kg"  formControlName="weight" class="form-control" id="salary" aria-describedby="emailHelp"  required>
+                    </div>
+
+                  </div>
+
+                     
+
+                         
+                          <button type="button" class="btn btn-primary" (click)="addRecords()">Add New Product</button>&nbsp;&nbsp;
+                          <button type="button" class="btn btn-info" routerLink="/home">Go To Home</button>
+                  
+                    </form>
+              </div>
+             
+            </div>

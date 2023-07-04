@@ -1,0 +1,39 @@
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                
+                <div class="card mt-4 p-4 shadow p-3 mb-5 bg-body rounded" style="width:35rem;">
+                    <div class="card-title text-dark"><h1 class="text-success">Login</h1></div>
+                    <div><h2 style="color: #54B435;">With your username & password</h2></div>
+                    <div class="text-secondary"><p style="color: #82CD47">Enter the <span class="text-success"> Username & Password</span>
+                       
+                        associated with your account</p></div>
+
+
+                    <form class="form" [formGroup]="loginForm" (ngSubmit)="logIn()">
+                        <div class="mb-3">
+                            <label class="form-label">Username</label>
+                            <input  formControlName="uname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username admin">
+                            </div>
+                            <div class="mb-3">
+                              <label  class="form-label">Password</label>
+                              <input formControlName="password" [type]="changetype?'password':'text'" class="form-control" id="exampleInputPassword1" placeholder="Enter Password 1234" >
+                             </div>
+
+                             <div class="d-grid  col-6 mx-auto mt-3">
+                                <button class="btn btn-outline-success" [disabled]="loginForm.invalid"> Login</button>
+                            
+                            </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.badges{
+    background-color: yellow;
+    color: dark;
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 20px;
+}
+.px-8{
+    margin-left: 114px;
+} 
+
+
+.col-md-5 {
+    flex: 0 0 auto;
+    width: 31.666667%;
+}
+.img-main-banner img{
+    width:464px
+}

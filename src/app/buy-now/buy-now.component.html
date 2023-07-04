@@ -1,0 +1,32 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                
+                <div class="card mt-4 p-4" style="width:35rem;">
+                    <a class="text-secondary text-decoration-none mb-4" routerLink="/product"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                    <div class="card-title text-dark"><h1>Sign in</h1></div>
+                    <div class="text-success"><h2>With your number</h2></div>
+                    <div class="text-secondary"><p>Enter the <span class="text-success"> Phone Number</span>
+                       
+                        associated with your account</p></div>
+                    <form class="form" [formGroup]="loginForm" (ngSubmit)="logIn()">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Enter Your Mobile Number</label>
+                            <input type="text"  formControlName="phone"  class="form-control" id="exampleInputEmail1" placeholder="+91 | *Enter Your Mobile Number ..." aria-describedby="emailHelp" maxlength="10">
+                            <div class="d-grid  mx-auto  mt-3">
+                                <button class="btn btn-outline-success" [disabled]="loginForm.invalid"> Proceed</button>
+                            
+                            </div>
+                            <div class="text-dark mt-4"><h5>New At Happify World <a class="text-success text-decoration-none" routerLink="/buy-sign">Sign Up</a></h5></div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

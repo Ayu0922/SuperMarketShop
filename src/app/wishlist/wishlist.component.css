@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Poppins&family=Roboto+Condensed:ital,wght@0,300;1,400&family=Roboto+Slab:wght@100;200;300;700&display=swap');
+body{
+    font-family: 'Barlow', sans-serif;
+}
+.card{
+    height: 70vh;
+    margin:25px;
+    padding: 25px;
+}
+.center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+h4,h6{
+    font-weight: 400;
+}
+h5{
+    font-size: 25px;
+    font-weight: 600;
+    color: blue;
+}
+.center img{
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    /* margin: 20px 0px; */
+    height:150px;
+    width:230px; 
+}
+.card-table{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    /* border:1px solid rgba(0,0,0,0.2) ; */
+}
+.center .btn{
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+#shopmore{
+    border: 1px solid gray;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+table{
+    margin-bottom: 0;
+}
+.action-btn{
+    margin-top: 5px;
+}
+h1{
+    color: #fff;
+    background-color: blue;
+    border: 1px solid blue;
+    border-top-left-radius: 2px !important;
+    border-top-right-radius: 8px !important;
+    border-bottom-right-radius: 2px !important;
+    border-bottom-left-radius: 8px !important;
+}
+/* h1:hover{
+    background-color:#79E0EE;
+    color: blue;
+    border: 1px solid #79E0EE;
+} */

@@ -1,0 +1,167 @@
+
+<app-header></app-header>
+<!-- Vegetables section start  -->
+<section class="my-lg-14 my-8">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-6 mb-6 mt-3">
+
+               <h3 class="mb-4 nav-name">Vegetables</h3>
+
+           </div>
+           <div class="col-md-6 mb-6 mt-3">
+               <form class="d-flex mb-6">
+                   <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}"> -->
+                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTerm" (keyup)="search($event)" [ngModelOptions]="{standalone: true}">
+                   
+                   <button class="btn-search-icon rounded-circle"><i class="bi bi-search-heart"></i></button>
+                 </form>
+           </div>
+       </div>
+
+       <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
+           <ng-container *ngFor="let item of filterCategory|filter:searchKey:'subtitle'">
+           <div class="col">
+               <div class="card card-product">
+                   <div class="card-body">
+
+                       <div class="text-center position-relative ">
+                           <div class=" position-absolute top-0 start-0">
+                               <span class="badge bg-danger">{{item.bage}}</span>&nbsp;&nbsp;&nbsp;
+                               <span class="badge bg-success">{{item.off}}</span>
+                           </div>
+                           <a href="#!">
+<img src="{{item.img}}" alt="Grocery Ecommerce Template" class="mb-3 img-fluid">
+</a>
+<div class="card-product-action">
+<a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+<i class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
+<a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist" (click)=addtowishlist(item)><i class="bi bi-heart"></i></a>
+<!-- <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a> -->
+
+</div>
+</div>
+<div class="text-small mb-1">
+   <a href="#!" class="text-decoration-none text-muted">
+       <small>{{item.subtitle}}</small></a>
+   </div>
+   <h2 class="fs-6">
+   <a href="#!" class="text-inherit text-dark  text-decoration-none">{{item.title}}</a></h2>
+   <div>                       
+                       
+
+           <span class="badge rounded-pill bg-success small">{{item.rate}} <i class="bi bi-star-fill"></i></span>
+           <span class="text-muted"> {{item.sold}}</span>
+   </div>
+                       <div class="d-flex justify-content-between align-items-center mt-3">
+                         
+                           <span class="text-dark"><strong>{{item.price*item.qty}}&#8377;</strong>  </span> &nbsp;
+                           <span class="text-dark">{{item.weight}}</span>
+                           
+                          
+                    </div>
+                    <div class=" d-flex justify-content-center align-items-center mt-1 pt-3 counter">
+                        <p><span (click)="dec(item)" style="cursor: pointer;margin-right: 3px;"><i class="bi bi-dash-square-fill" style="color:red"></i></span> {{item.qty}} <span (click)="inc(item)" style="cursor: pointer;margin-left: 3px;"><i class="bi bi-plus-circle-fill"></i></span></p>
+                    </div>  
+                        <div class="d-flex justify-content-between align-items-center mt-1">
+                            <span class="bg-light text-primary rounded p-1"><i class="fa-solid fa-truck-fast"></i> <span class="ps-1 fw-bold">Free Delivery</span></span>
+                        </div>
+                           <div class="d-grid  mx-auto  mt-3">
+                               <button class="btn btn-outline-success" (click)=addtocart(item)><i class="fa-regular fa-plus"></i> Add</button>      
+                           </div>
+                      
+                   </div>
+               </div>
+           </div>
+           
+       </ng-container>
+
+       </div>
+
+   </div>
+</section>
+ <!-- Vegetables section end  -->
+ <hr>
+
+ <section class="my-lg-14 my-8">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mb-6 mt-3">
+ 
+                <h3 class="mb-4 nav-name">Fruits</h3>
+ 
+            </div>
+            <!-- <div class="col-md-6 mb-6 mt-3">
+                <form class="d-flex mb-6">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}">
+                    
+                    <button class="btn-search-icon rounded-circle"><i class="bi bi-search-heart"></i></button>
+                  </form>
+            </div> -->
+        </div>
+ 
+        <div class="row g-4 row-cols-lg-5 row-cols-2 row-cols-md-3">
+            <ng-container *ngFor="let item of fruitsFilterCategory">
+            <div class="col">
+                <div class="card card-product">
+                    <div class="card-body">
+ 
+                        <div class="text-center position-relative ">
+                            <div class=" position-absolute top-0 start-0">
+                                <span class="badge bg-danger">{{item.bage}}</span>&nbsp;&nbsp;&nbsp;
+                                <span class="badge bg-success">{{item.off}}</span>
+                            </div>
+                            <a href="#!">
+ <img src="{{item.img}}" alt="Grocery Ecommerce Template" class="mb-3 img-fluid">
+ </a>
+ <div class="card-product-action">
+ <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+ <i class="fa-solid fa-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
+ <a  class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist" (click)=addtowishlist(item)><i class="bi bi-heart"></i></a>
+ <!-- <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a> -->
+ 
+ </div>
+ </div>
+ <div class="text-small mb-1">
+    <a href="#!" class="text-decoration-none text-muted">
+        <small>{{item.subtitle}}</small></a>
+    </div>
+    <h2 class="fs-6">
+    <a href="#!" class="text-inherit text-dark  text-decoration-none">{{item.title}}</a></h2>
+    <div>                       
+                        
+ 
+            <span class="badge rounded-pill bg-success small">{{item.rate}} <i class="bi bi-star-fill"></i></span>
+            <span class="text-muted"> {{item.sold}}</span>
+    </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            
+                            <span class="text-dark"><strong>{{item.price}}&#8377;</strong>  </span> &nbsp;
+                            <span class="text-dark">{{item.weight}}</span>
+
+                             
+                        </div>
+                        <div class=" d-flex justify-content-center align-items-center mt-1 pt-3 counter">
+                            <p><span (click)="dec(item)" style="cursor: pointer;margin-right: 3px;"><i class="bi bi-dash-square-fill" style="color:red"></i></span> {{item.qty}} <span (click)="inc(item)" style="cursor: pointer;margin-left: 3px;"><i class="bi bi-plus-circle-fill"></i></span></p>
+                        </div>
+                           
+                        <div class="d-flex justify-content-between align-items-center mt-1">
+                            <span class="bg-light text-primary rounded p-1"><i class="fa-solid fa-truck-fast"></i> <span class="ps-1 fw-bold">Free Delivery</span></span>
+                        </div>
+                           <div class="d-grid  mx-auto  mt-3">
+                               <button class="btn btn-outline-success" (click)=addtocart(item)><i class="fa-regular fa-plus"></i> Add</button>      
+                           </div>
+                      
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </ng-container>
+ 
+        </div>
+ 
+    </div>
+ </section>
+ <app-service></app-service>
+ <app-footer></app-footer>

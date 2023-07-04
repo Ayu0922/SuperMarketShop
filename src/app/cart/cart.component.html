@@ -1,0 +1,116 @@
+<body>
+    <ng-container *ngIf="product.length !=0">
+       <div class="container justify-content-center" id="shopmore">
+      
+
+        <!-- <h1 class="text-warning text-center mb-3 mt-3 p-2" >Shopping Cart</h1> -->
+        <!-- <h1>Shopping Cart</h1> -->
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sr.No.</th>
+                            <th scope="col">Product Image</th>
+                            <!-- <th>Product Category</th> -->
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Price</th>
+                            <!-- <th>Weight</th>
+                            <th>Rate</th> -->
+                            <!-- <th>Quntity</th>
+                            <th>Total</th> -->
+                            <th>Quntity</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of product;let i=index">
+                            <td scope="row">{{i+1}}</td>
+                            <td><img style="width: 120px;" src="{{item.img}}" alt=""></td>
+                            <!-- <td>{{item.subtitle}}</td> -->
+                            <td style="width: 25%;">{{item.title}}</td>
+                           
+                            <th style="width: 12%;">&#8377;{{item.price*item.qty}} </th>
+                            <!-- <td style="width: 12%;">{{item.weight}}</td>
+                            <td style="width: 12%;">{{item.rate}} <i class="bi bi-star-fill" style="color:gold"></i></td> -->
+                            <!-- <td style="width: 12%;">{{item.quantity}}</td>
+                            <td style="width: 12%;">{{item.total}}</td> -->
+                            <td class="counter">  <p><span (click)="dec(item)"  data-bs-toggle="tooltip" title="Remove 1 Item" style="cursor: pointer;"><i class="fa-solid fa-square-minus" style="color: #ea1010;"></i></span> {{item.qty}} <span (click)="inc(item)" data-bs-toggle="tooltip" title="Add 1 Item" style="cursor: pointer;"><i class="fa-solid fa-circle-plus" ></i></span></p></td>
+                            <td>
+                                <button class="btn btn-success" data-bs-toggle="tooltip"  title="Buy Now" routerLink="/buy" ><i class="fa-solid fa-cart-arrow-down"></i></button>&nbsp;
+
+                                <button (click)="removeItem(item)" class="btn btn-danger" data-bs-toggle="tooltip" title="Remove Item"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                       
+                   
+                    </tbody>
+                </table>
+               
+            </div>
+        </div>
+        <div class="action-btn">
+            <button (click)="emptycart()" class="btn btn-danger btn-lg" >Empty Cart</button>&nbsp;&nbsp;
+            <button routerLink="/product" class="btn btn-primary btn-lg" style="margin-right: 18px;">Shop More</button>
+          
+                <!-- <strong ><h4 class="d-flex justify-content-end align-items-right mt-3">
+                    Grand Total :&#8377;{{grandTotal}}
+                  
+                </h4> </strong> -->
+        </div>
+    </div>
+    <div>
+        <h5 class="font-12  text-uppercase mb-2 mt-5 ms-4" style="font-weight: 700;">Price summary</h5>
+        <ul class="list-group mb-2 ">
+            <li class="list-group-item rounded-8 p-0">
+              <div class="d-flex align-items-center justify-content-between border-bottom px-4 py-2">
+                <span class="font-14 font-400" style="font-weight: 500;">MRP Total (3 Items) (Inclusive of all taxes)</span>
+                <span class="font-16 font-700 text-muted  flex-shrink-0" style="font-weight: 700;">₹ {{grandTotal}}</span>
+              </div>
+              <div class="d-flex align-items-center justify-content-between px-4 py-1">
+                    <span class="font-14 font-700 text-muted" style="font-weight: 700;">Additional Savings</span>
+                    <span class="font-16 font-700 text-muted" style="font-weight: 700;">₹ <span class="cpnDisValue">0.00{{discountPercentage}}</span></span>
+              </div>
+            <div class="d-flex align-items-center justify-content-between px-4 py-1">
+               <strong>
+                <span class="fs-5 font-700">Order Total</span>   </strong>
+             
+                <strong><span class="fs-5 font-700">₹ <span class="ttlCrtPrc">
+                    {{grandTotal}}</span></span> </strong>  
+                    
+              </div>
+              <div class="d-flex align-items-center justify-content-between px-4 py-1">
+                <div class="font-14 font-700 text-muted" style="font-weight: 700;">Total Savings</div>
+                <div>
+                <span class="totalSaving font-16 font-700 text-muted" style="font-weight: 700;">
+                ₹ 0.00</span>
+                 <span class="font-16 font-700 text-muted" style="font-weight: 700;">
+                 (<span class="totalSavingPercent">0</span> %)
+                 </span> 
+                </div>
+              </div>
+            </li>
+            </ul>
+    </div>
+     
+       
+       
+    </ng-container>
+    
+    
+    
+    
+    <ng-container *ngIf="product.length == 0">
+        <div class="container">
+            <div class="card">
+               <strong> <h5 class="card-title">MY CART</h5></strong>      
+            </div>
+            <div class="center">
+                <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90" alt="">
+                <h4>Your Cart Is Empty</h4>
+                <h6>Add Item Now</h6>
+                <button routerLink="/product" class="btn btn-primary">Shop Now</button>
+            </div>
+        </div>
+    </ng-container>
+    </body>

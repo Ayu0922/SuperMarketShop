@@ -1,0 +1,79 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="d-flex justify-content-center align-items-center mt-3">
+                
+                <div class="card mt-4 p-4" style="width:50rem;">
+                    <a class="text-secondary text-decoration-none mb-4" routerLink="/buy"><i class="fa-solid fa-arrow-left"></i> Back</a>
+                    <div class="card-title text-dark"><h1>Sign Up</h1></div>
+                    <div class="text-success"><h2>With your number</h2></div>
+                    <div class="text-secondary"><p>Enter the <span class="text-success"> Phone Number</span>
+                       
+                        associated with your account</p></div>
+                    <form class="form" [formGroup]="accRecords" >
+                        <div class="row">
+                    
+                        <div class="col-md-6 mb-3 ">
+                            <label for="exampleInputEmail1" class="form-label"> Name</label>
+                            <input type="text" placeholder="Enter Your Name" formControlName="name" class="form-control"  id="name" aria-describedby="emailHelp" required>
+                         </div>
+                         <div class="col-md-6 mb-3">
+                            <label for="exampleInputEmail1" class="form-label"> Email</label>
+                            <input type="text" placeholder="Enter Your Email ID" formControlName="email" class="form-control"  id="email" aria-describedby="emailHelp" required>
+                         </div>
+
+                        
+                         </div>
+                         <div class="row">
+                            <div class=" mb-3">
+                                <label for="exampleInputEmail1" class="form-label"> Address</label>
+                                <textarea aria-colspan="4" placeholder="House No./Building Name" formControlName="addr" class="form-control"  id="addr" aria-describedby="emailHelp" required></textarea>
+                             </div>
+                         </div>
+                         <div class="row">
+
+                       
+                         <div class="col-md-6 mb-3">
+                            <label for="exampleInputEmail1" class="form-label">City</label>
+                            <input type="text" placeholder="Enter Your City" formControlName="city" class="form-control"  id="addr" aria-describedby="emailHelp" required>
+                         </div>
+                         <div class="col-md-6 mb-3">
+                            <label for="subtitle" class="form-label">State</label>
+                                  <select formControlName="state" id="state" class="form-select"  aria-label="Default select example">
+                                    <!-- <option selected>Open this select menu</option> -->
+                                    <option *ngFor="let order of states; let i = index" [value]="states[i].name">
+                                      {{states[i].name}}
+                                    </option>
+                                  </select>
+                         </div>
+                         </div>
+                         <div class="row">
+                              <div class="col-md-6  mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Pincode</label>
+                            <input type="number" placeholder="Enter Your Pincode" formControlName="pin" class="form-control"  id="addr" aria-describedby="emailHelp" required>
+                         </div>
+                         <div class=" col-md-6 mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                            <input type="text"  formControlName="phone"  class="form-control" id="exampleInputEmail1" placeholder="+91 | *Enter Mobile Number" aria-describedby="emailHelp" maxlength="10">
+                            
+                          </div>
+                         </div>
+
+                        
+                          <div class="d-grid col-6 mx-auto mt-3">
+                            <button class="btn  btn-success"  (click)="addRecords()" routerLink="/buy"> Submit</button>
+                        
+                        </div>
+                        <div class="text-dark mt-4"><h5>Already have an account? <a class="text-success text-decoration-none" routerLink="/buy">Sign in</a></h5></div>
+                       
+                        
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

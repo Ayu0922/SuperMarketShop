@@ -1,0 +1,10 @@
+form{
+    border-radius: 8px;
+    align-items: center;
+    background: cornsilk;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #E64848;
+    color: #E64848;
+}

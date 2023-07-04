@@ -1,0 +1,21 @@
+/* .bg-image{
+    padding: 40px;
+} */
+
+
+
+
+/* 
+@media (min-width: 768px) */
+.col-md-5 {
+    flex: 0 0 auto;
+    width: 31.666667%;
+}
+.img-main-banner img{
+    width:464px
+}
+.lead{
+    font-size: 1.7rem;
+    margin-top: 2em;
+}
+
