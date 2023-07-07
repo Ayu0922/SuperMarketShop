@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxOtpInputModule } from 'ngx-otp-input';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -61,6 +62,7 @@ import { OrderModule } from 'ngx-order-pipe';
     HttpClientModule ,
     // Ng2SearchPipeModule,
     FormsModule,
+    NgxOtpInputModule,
     // OrderModule,
     // Ng2OrderModule,
     ReactiveFormsModule,

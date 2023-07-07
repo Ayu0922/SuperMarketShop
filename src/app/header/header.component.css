@@ -36,3 +36,9 @@ nav{
 .nav-link{
     color: green;
 }
+.fa-bars{
+    color: green;
+    border: 1px solid green;
+    padding: 6px 12px;
+    border-radius: 4px
+}

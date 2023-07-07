@@ -82,7 +82,8 @@
     text-align: center;
     transition: all .3s ease 0s;
     vertical-align: middle;
-    width: 34px
+    width: 34px;
+    text-decoration: none;
 }
 
 .card-product .btn-action:hover {
@@ -232,4 +233,23 @@ button.btn-outline-success{
     border-top-right-radius: 8px !important;
     border-bottom-right-radius: 2px !important;
     border-bottom-left-radius: 8px !important;
+}
+#best_sellers{
+    background:  #0aad0a;
+    border-radius: 7px 0px 8px;
+    padding: 4px 8px;
+    width: 83px;
+    height: 23px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    top: 0%;
+    left: 59%;
+    z-index: 1;
 }
