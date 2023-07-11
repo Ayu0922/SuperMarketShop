@@ -4,7 +4,7 @@ First run command --> `npm install --save json-server`
  To Start database run this command --> `json-server --watch market.json`
 
  it will load market.json.
-copy-paste localhost:3000 url from there run it your chrome browser.
+copy-paste `localhost:3000` url from there run it your chrome browser.
 
 # SuperMarketShop
 
