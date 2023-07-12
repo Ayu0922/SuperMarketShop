@@ -4,7 +4,7 @@ First run command --> `npm install --save json-server`
  To Start database run this command --> `json-server --watch market.json`
 
  it will load market.json.
-copy-paste localhost:3000 url from there run it your chrome browser.
+copy-paste `localhost:3000` url from there run it your chrome browser.
 
 # SuperMarketShop
 
@@ -33,3 +33,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
+
+
+
+
