@@ -62,7 +62,7 @@ import { OrderModule } from 'ngx-order-pipe';
     HttpClientModule ,
     // Ng2SearchPipeModule,
     FormsModule,
-    NgxOtpInputModule,
+    NgxOtpInputModule, 
     // OrderModule,
     // Ng2OrderModule,
     ReactiveFormsModule,
