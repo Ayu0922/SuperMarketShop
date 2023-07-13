@@ -31,6 +31,10 @@ import { BuyNowComponent } from './buy-now/buy-now.component';
 import { BuySignUpComponent } from './buy-sign-up/buy-sign-up.component';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import { OrderModule } from 'ngx-order-pipe';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserHeaderComponent } from './user-header/user-header.component';
+import { UserHomepageComponent } from './user-homepage/user-homepage.component';
+import { AddnewComponent } from './addnew/addnew.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +58,10 @@ import { OrderModule } from 'ngx-order-pipe';
          WishlistComponent,
          BuyNowComponent,
          BuySignUpComponent,
+         LandingPageComponent,
+         UserHeaderComponent,
+         UserHomepageComponent,
+         AddnewComponent,
        
   ],
   imports: [

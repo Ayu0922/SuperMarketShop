@@ -20,10 +20,17 @@ import { LoginComponent } from './login/login.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 import { BuyNowComponent } from './buy-now/buy-now.component';
 import { BuySignUpComponent } from './buy-sign-up/buy-sign-up.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { UserHeaderComponent } from './user-header/user-header.component';
+import { UserHomepageComponent } from './user-homepage/user-homepage.component';
+import { AddnewComponent } from './addnew/addnew.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:'login',pathMatch:'full'},
+  {path:'',redirectTo:'land',pathMatch:'full'},
+  {path:'land',component:LandingPageComponent},
   // {path:'',redirectTo:'home',pathMatch:'full'},
+  {path:'user-header',component:UserHeaderComponent},
+  {path:'user-homepage',component:UserHomepageComponent},
   {path:'header',component:HeaderComponent},
   {path:'product',component:ProductComponent},
   {path:'home',component:HomeComponent},
@@ -42,7 +49,8 @@ const routes: Routes = [
   {path:'wishlist',component:WishlistComponent},
   {path:'login',component:LoginComponent},
   {path:'buy',component:BuyNowComponent},
-  {path:'buy-sign',component:BuySignUpComponent}
+  {path:'buy-sign',component:BuySignUpComponent},
+  {path:'addnew',component:AddnewComponent}
 ];
 
 @NgModule({

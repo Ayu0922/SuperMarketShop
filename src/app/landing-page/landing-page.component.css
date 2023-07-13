@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+.bgimg {
+    background-image: url('https://img.freepik.com/free-vector/abstract-grass_1182-699.jpg?w=740&t=st=1689232209~exp=1689232809~hmac=84f40fc3a7e62bdc1e53995e5327b92393ec09596ee13572b4ee9e51d5d973a0');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: black;
+    
+    font-size: 25px;
+  }
+  h1{
+    font-family: 'Chela One', cursive;
+    font-size: 3em;
+    color: rgb(47, 243, 47);
+  }
+  p{
+    font-family: 'Chela One', cursive;
+    font-size: 1.6em;
+    color:#2B7A0B;
+  }
+  .topleft {
+    position: absolute;
+    top: 0;
+    left: 16px;
+  }
+  
+  .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+  }
+  
+  .middle {
+    position: absolute;
+    /* top: 45%;
+    left: 50%; */
+    top:26%;
+    left: 8%;
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+  }
+  
+  hr {
+    margin: auto;
+    width: 40%;
+  }
+  .btn-outline-success{
+    border-top-left-radius: 2px !important;
+    border-top-right-radius: 18px !important;
+    border-bottom-right-radius: 2px !important;
+    border-bottom-left-radius: 18px !important;
+  }
+  .btn-outline-primary{
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 2px !important;
+    border-bottom-right-radius: 15px !important;
+    border-bottom-left-radius: 2px !important;
+  }

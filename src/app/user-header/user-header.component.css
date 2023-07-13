@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Lobster&family=Open+Sans&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&family=Roboto+Slab:wght@500&display=swap');
 nav{
     background-color: white;
     position: sticky;
@@ -9,9 +9,9 @@ nav{
 
 .nav-name{
     color: #0aad0a;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 600;
-    font-family: 'Lobster', cursive;
+    font-family: 'FontAwesome';
 }
 
 .dropdown-item {
@@ -44,17 +44,4 @@ nav{
     border: 1px solid green;
     padding: 6px 12px;
     border-radius: 4px
-}
-.nav-item{
-    cursor: pointer;
-}
-.badge{
-    font-family: 'Poppins', sans-serif;
-    font-size: 13px !important; 
-}
-.badge.rounded-pill:hover{
- background-color: #fff !important;
- color: black !important;
- border: 1px solid gray;
- box-shadow: 2px 2px 3px ;
 }
