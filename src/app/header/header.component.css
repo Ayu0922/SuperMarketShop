@@ -4,13 +4,14 @@ nav{
     position: sticky;
     top: 0;
     z-index: 99;
-    font-family: 'Roboto Slab', serif;
 }
 
 
 .nav-name{
     color: #0aad0a;
     font-size: 26px;
+    font-weight: 600;
+    font-family: 'FontAwesome';
 }
 
 .dropdown-item {
