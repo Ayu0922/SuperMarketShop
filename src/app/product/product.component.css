@@ -176,12 +176,10 @@
     opacity: 1;
     transform: translateX(0)
 }
-
 .card-product-v2 .product-content-fade.border-info {
     border: 1px solid #0aad0a !important;
     border-radius: .5rem
 }
-
 .card-product-v2:hover.card {
     border: none;
     z-index: 2
@@ -195,18 +193,15 @@
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
     transform: translate3d(0, -3px, 0)
 }
-
 .salessection{
     padding: 2rem;
 }
 .btn-search-icon{
-    /* border-radius:30px ; */
     background-color: #0aad0a;
     border: none;
     padding: .25rem;
     width: 40px;
 }
-
 button.btn-outline-success{
     border-top-left-radius: 2px !important;
     border-top-right-radius: 8px !important;
@@ -232,7 +227,6 @@ button.btn-outline-success{
     left: 59%;
     z-index: 1;
 }
-
 .counter p{
     border: 1px solid gray;
     padding: 3px;
@@ -241,14 +235,9 @@ button.btn-outline-success{
     text-align: center;
     margin: 0;
     font-weight: 500;
-    
-
-}
+    }
 .counter p:hover{
     background-color: #0aad0a;
     color: #fff;
     border-radius: 4px;
-}
-.bi-circle-plus:hover{
-    color: #fff;   
 }
