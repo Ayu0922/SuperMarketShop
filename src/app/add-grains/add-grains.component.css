@@ -8,4 +8,13 @@ font-size: 16px;
 font-weight: 500;
 border: 1px solid blue;
 color: darkslategray;
+margin-bottom: 12em;
+width: 60em;
+}
+.container-fluid{
+    background-image: url('https://img.freepik.com/free-photo/view-allergens-commonly-found-grains_23-2150170281.jpg?w=900&t=st=1689315813~exp=1689316413~hmac=3f6aa7806228ffb946250ec229ae0eb19db7cd68d33baa720bb8f88e2c40a501');
+    background-size: cover;
+}
+h1{
+    background-color: #fff;
 }
