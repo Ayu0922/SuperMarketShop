@@ -9,3 +9,6 @@ form{
     border: 1px solid blue;
     color: darkslategray;
 }
+.container-fluid{
+    background-image: url('https://img.freepik.com/free-photo/christmas-sweets-platter_114579-20426.jpg?w=740&t=st=1689313246~exp=1689313846~hmac=d5ea5c6c6f3d282b44e5727f2837eaad156ae8694fc0b7915fdbce35533e80be');
+}
