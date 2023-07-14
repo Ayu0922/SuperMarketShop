@@ -8,7 +8,13 @@ form{
     font-weight: 500;
     border: 1px solid blue;
     color: darkslategray;
+    margin-bottom: 12em;
+    width:60em;
 }
 .container-fluid{
-    background-image: url('https://img.freepik.com/free-photo/christmas-sweets-platter_114579-20426.jpg?w=740&t=st=1689313246~exp=1689313846~hmac=d5ea5c6c6f3d282b44e5727f2837eaad156ae8694fc0b7915fdbce35533e80be');
+    background-image: url('https://img.freepik.com/free-photo/front-view-little-spicy-chips-inside-plate-light-blue-surface_140725-61660.jpg?w=740&t=st=1689313740~exp=1689314340~hmac=168bd99a3f94f92cb56f43087ccb14b8f3713fb34867b69be81dc8bf58e19c25');
+    background-size: cover;
+}
+h1{
+    background-color: #fff;
 }
