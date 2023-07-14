@@ -7,4 +7,13 @@ form{
     font-weight: 500;
     border: 1px solid #FF8400;
     color: #FF8400;
+    margin-bottom: 12em;
+    width: 60em;
+}
+.container-fluid{
+    background-image: url('https://as1.ftcdn.net/v2/jpg/02/45/23/00/1000_F_245230028_DxzwLLdNZMGxfx3G0ryFrX0XpAdi6qpA.jpg');
+    background-size: cover;
+}
+h1{
+    background-color: #fff;
 }
