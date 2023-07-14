@@ -8,4 +8,13 @@ font-size: 16px;
 font-weight: 500;
 border: 1px solid #379237;
 color:#379237;
+margin-bottom: 12em;
+width: 60em;
+}
+.container-fluid{
+    background-image: url('https://as2.ftcdn.net/v2/jpg/03/20/39/89/1000_F_320398931_CO8r6ymeSFqeoY1cE6P8dbSGRYiAYj4a.jpg');
+    background-size: cover;
+}
+h1{
+    background-color: #fff;
 }
