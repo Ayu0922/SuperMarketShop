@@ -16,6 +16,7 @@ export class ProductComponent {
 title: any;
 id:number=1;
 count=1
+currentProductData: any;
 counter(type:string){
   type === 'add' ? this.count++:this.count--;
   
@@ -134,7 +135,11 @@ counter(type:string){
       console.log(this.searchTerm);
       this.cartService.search.next(this.searchTerm);
     }
-
+    quickViewProduct(data:any)
+    {
+      this.currentProductData=data;
+      console.log(this.currentProductData,'data')
+    }
    
   }
   
