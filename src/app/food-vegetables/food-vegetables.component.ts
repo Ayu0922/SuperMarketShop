@@ -15,6 +15,7 @@ public searchTerm : string ='';
 public foodctList :any;
 public fruitsFilterCategory : any
 searchKey:string="";
+currentProductData: any;
 title: any;
   constructor(private api :ApiService,private cartService :CartService,private router:Router) { }
 
@@ -98,5 +99,11 @@ addtowishlist(item:any){
     this.searchTerm =(event.target as HTMLInputElement).value;
     console.log(this.searchTerm);
     this.cartService.search.next(this.searchTerm);
+  }
+
+  quickViewProduct(data:any)
+  {
+    this.currentProductData=data;
+    console.log(this.currentProductData,'data')
   }
 }

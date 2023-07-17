@@ -14,6 +14,7 @@ export class BekaryProductComponent {
   public foodctList :any;
   public fruitsFilterCategory : any
   searchKey:string="";
+  currentProductData: any;
   title: any;
     constructor(private api :ApiService,private cartService :CartService) { }
   
@@ -88,5 +89,10 @@ export class BekaryProductComponent {
     this.searchTerm =(event.target as HTMLInputElement).value;
     console.log(this.searchTerm);
     this.cartService.search.next(this.searchTerm);
+  }
+  quickViewProduct(data:any)
+  {
+    this.currentProductData=data;
+    console.log(this.currentProductData,'data')
   }
 }

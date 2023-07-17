@@ -13,6 +13,7 @@ export class FoodGrainsComponent {
   public filterCategory : any
   public searchTerm : string ='';
   searchKey:string="";
+  currentProductData: any;
 title: any;
     constructor(private api :ApiService,private cartService :CartService) { }
   
@@ -73,5 +74,10 @@ title: any;
     this.searchTerm =(event.target as HTMLInputElement).value;
     console.log(this.searchTerm);
     this.cartService.search.next(this.searchTerm);
+  }
+  quickViewProduct(data:any)
+  {
+    this.currentProductData=data;
+    console.log(this.currentProductData,'data')
   }
 }

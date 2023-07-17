@@ -247,3 +247,22 @@ button.btn-outline-success{
     left: 59%;
     z-index: 1;
 }
+#best_sellers_view{
+    background: #0aad0a;
+    border-radius: 7px 0px 8px;
+    padding: 4px 8px;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    z-index: 1;
+}

@@ -36,7 +36,7 @@
 <img src="{{item.img}}" alt="Grocery Ecommerce Template" class="mb-3 img-fluid">
 </a>
 <div class="card-product-action">
-<a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal">
+<a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal" (click)="quickViewProduct(item)">
 <i class="fa-solid fa-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
 <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Wishlist" (click)=addtowishlist(item)><i class="fa-regular fa-heart"></i></a>
 <!-- <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i class="bi bi-arrow-left-right"></i></a> -->
@@ -83,5 +83,47 @@
    </div>
 </section>
  <!-- products section end  -->
+ <div class="modal fade" id="quickViewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{currentProductData?.title}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         <div class="row" >
+            
+            <div class=" position-absolute top-0 start-0">
+            <span class="badge bg-danger">{{currentProductData?.bage}}</span>&nbsp;&nbsp;&nbsp;
+            <span class="badge bg-success">{{currentProductData?.off}}</span>
+            <span id="best_sellers_view">Best Sellers</span>
+          </div>
+            <img src="{{currentProductData?.img}}" alt="Grocery Ecommerce Template" class="mb-3">
+<div class="d-flex flex-column bd-highlight mb-3">
+<div class="p-2 bd-highlight">Product Brand :<span >{{currentProductData?.title}}</span></div> 
+
+<div class="p-2 bd-highlight">Product Category :<span >{{currentProductData?.subtitle}}</span></div> 
+
+<div class=" p-2 bd-highlight"> Product  Price : <span class="text-dark"><strong>&#8377;{{currentProductData?.price*currentProductData?.qty}}</strong></span></div>
+
+<div class="p-2 bd-highlight">   Product  Weight :<span class="text-dark ">{{currentProductData?.weight}}</span></div>
+<div class="p-2 bd-highlight">  Sold Product :<span class="text-dark ">{{currentProductData?.sold}}</span></div>
+</div>
+<div  class="p-2 bd-highlight">
+<span class="bg-light text-primary rounded p-2"><i class="fa-solid fa-truck-fast"></i> <span class="ps-1 fw-bold">Free Delivery</span></span>
+
+</div>
+            
+         </div>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="button" class="btn btn-primary" routerLink="/buy" data-bs-dismiss="modal">Buy Now</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+          
+        </div>
+         </div>
+        </div>
+       
+      </div>
+    </div>
  <app-service></app-service>
  <app-footer></app-footer>
